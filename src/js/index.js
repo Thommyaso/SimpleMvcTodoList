@@ -1,6 +1,11 @@
 import '../styles/style.scss';
-import abc from './abc';
 
-console.log('works fine!!');
+import View from './view';
+import Controller from './controller';
 
-console.log(abc);
+document.addEventListener('DOMContentLoaded', () => {
+    const controller = new Controller();
+    const view = new View(controller);
+
+    view.init();
+});
